@@ -98,6 +98,9 @@ var mainState = {
       mainState.checkForMatches(userText);
       userText = ''
       userTextDisplay.setText('');
+    } else if (e.keyCode === 8) {
+      userText = userText.slice(0,-1);
+      userTextDisplay.setText(userText);
     } else {
       userText += String.fromCharCode(e.keyCode);
       userTextDisplay.setText(userText);
